@@ -1,70 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<main style="overflow: hidden;">
+    <main style="overflow: hidden;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The girlpuppy Breakup Survival Guide</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>The girlpuppy Breakup Survival Guide</title>
-        <style>
-            /* Basic Reset */
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
+        body {
+            background-size: cover;
+            background-image: url(GIRLPUPPY\ BG\ IMAGE\ WEB.jpg);
+            background-position: -70px;
+            background-position-y: 30px;;
+            font-family: 'Helvetica', sans-serif;
+            height: 100vh;
+            text-align: center;
+            padding: 0;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            margin-top: -30px;
+            padding: 30px;
+            color: #fff;
+        }
+
+        .buttons-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* Default to 5 buttons in one row */
+            gap: 15px;
+            justify-content: center;
+            margin-top: 60px;
+            position: relative;
+        }
+
+        .btn {
+            background: url(logo.png);
+            border: none;
+            color: white;
+            font-size: 1rem;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            min-width: 150px;
+            text-align: center;
+            position: relative;
+            display: block;
+            width: 100%;
+        }
+
+        .myBtn {
+            width: 100%;
+            height: auto;
+        }
+
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .content {
+            position: relative;
+            color: #f1f1f1;
+            padding: 0 20px;
+            z-index: 1;
+        }
+
+        .logo_row_Sweetness {
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        .logo_Sweetness {
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
+
+        .logo_row_CT {
+            margin: auto;
+            width: 600px;
+            height: auto;
+            position: relative;
+        }
+
+        .logo_CT {
+            width: 100%;
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .bottom_right {
+            position: absolute;
+            /*size-adjust: 10px;*/
             
-            @font-face {
-                font-family: myFont;
-                src: url(helvetica-bold.otf);
-            }
+            right: 0px;
+            bottom:0px;
+        }
 
-
+        
+        /* Media Queries for responsiveness */
+        @media (max-width: 1000px) {
             body {
-                font-family: myFont;
-                background-size: cover;
-                font-family: 'Helvetica', sans-serif;
-                height: 100vh;
-                text-align: center;
-                padding: 0;
-                max-width: 100%;
-                overflow: hidden;
+                overflow-x: hidden;
             }
 
             h1 {
-                font-family: myFont;
-                font-size: 1.2rem;
-                margin-bottom: 20px;
-                margin-top: -30px;
-                padding: 30px;
-                color: #fff;
-            }
-
-            .buttons-container {
-                display: grid;
-                grid-template-columns: repeat(5, 1fr);
-                /* Default to 5 buttons in one row */
-                gap: 15px;
-                justify-content: center;
-                margin-top: 60px;
-                position: relative;
+                font-size: .5rem;
+                padding: 20px;
             }
 
             .btn {
-                background: url(logo.png);
-                border: none;
-                color: white;
                 font-size: 1rem;
-                padding: 10px;
-                margin: 10px;
-                border-radius: 5px;
-                cursor: pointer;
-                transition: background-color 0.3s ease;
-                min-width: 150px;
-                text-align: center;
-                position: relative;
-                display: block;
-                width: 100%;
+                padding: 8px 12px;
+                min-width: 120px;
             }
 
             .myBtn {
@@ -74,246 +143,161 @@
 
             #myVideo {
                 position: fixed;
-                right: 0;
-                bottom: 0;
                 top: 0;
                 left: 0;
+                right: 0;
+                bottom: 0;
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
-                z-index: -1;
-            }
-
-            .content {
-                position: relative;
-                color: #f1f1f1;
-                padding: 0 20px;
-                z-index: 1;
             }
 
             .logo_row_Sweetness {
-                width: 400px;
-                margin: 0 auto;
+                width: 300px;
             }
 
             .logo_Sweetness {
-                width: 100%;
                 height: auto;
-                text-align: center;
             }
 
             .logo_row_CT {
-                margin: auto;
-                width: 600px;
+                width: 150px;
                 height: auto;
-                /*position: relative;*/
             }
 
             .logo_CT {
-                width: 40%;
-                position: absolute;
-                top: 620px;
+                width: 80%;
+                top: -50px;
                 left: 50%;
                 transform: translateX(-50%);
             }
+        }
 
-            .bottom_right {
-                position: absolute;
-                /*size-adjust: 10px;*/
-
-                right: 0px;
-                bottom: 0px;
+        /* Mobile view (max-width: 600px) */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1rem;
+                margin-top: 5px;
+                padding: 0px;
             }
 
-
-            /* Media Queries for responsiveness */
-            @media (max-width: 1000px) {
-                body {
-                    overflow-x: hidden;
-                }
-
-                h1 {
-                    font-size: .5rem;
-                    padding: 20px;
-                }
-
-                .btn {
-                    font-size: 1rem;
-                    padding: 8px 12px;
-                    min-width: 120px;
-                }
-
-                .myBtn {
-                    width: 100%;
-                    height: auto;
-                }
-
-                #myVideo {
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    width: 100%;
-                    height: 100%;
-                }
-
-                .logo_row_Sweetness {
-                    width: 300px;
-                }
-
-                .logo_Sweetness {
-                    height: auto;
-                }
-
-                .logo_row_CT {
-                    width: 150px;
-                    height: auto;
-                }
-
-                .logo_CT {
-                    width: 80%;
-                    top: -50px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                }
+            .btn {
+                font-size: 0.5rem;
+                min-width: 100px;
+                padding: 6px 10px;
+                margin: 0px 0px;
             }
 
-            /* Mobile view (max-width: 600px) */
-            @media (max-width: 600px) {
-                h1 {
-                    font-size: 1rem;
-                    margin-top: 5px;
-                    padding: 0px;
-                }
-
-                .btn {
-                    font-size: 0.5rem;
-                    min-width: 100px;
-                    padding: 6px 10px;
-                    margin: 0px 0px;
-                }
-
-                .logo_row_Sweetness {
-                    width: 200px;
-                }
-
-                .logo_Sweetness {
-                    height: auto;
-                }
-
-                .logo_row_CT {
-                    width: 300px;
-                }
-
-                .logo_CT {
-                    width: 70%;
-                    bottom: -60px;
-                }
-
-                /* For mobile, adjust the grid to two rows of five */
-                .buttons-container {
-                    grid-template-columns: repeat(5, 1fr);
-                    margin-top: 10px;
-                    gap: 10px;
-                    row-gap: 0px;
-                }
+            .logo_row_Sweetness {
+                width: 200px;
             }
 
-            /* Additional mobile adjustment for smaller screens */
-            @media (max-width: 400px) {
-                .buttons-container {
-                    grid-template-columns: repeat(2, 1fr);
-                    /* 2 buttons per row for very small screens */
-                }
+            .logo_Sweetness {
+                height: auto;
             }
-        </style>
-    </head>
 
-    <body>
+            .logo_row_CT {
+                width: 300px;
+            }
 
-        <video autoplay muted loop id="myVideo">
-            <source src="bg5.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-        </video>
+            .logo_CT {
+                width: 70%;
+                bottom: -60px;
+            }
 
-        <!--ALL TEXT ON PAGE-->
-        <div class="content">
-            <div class="logo_row_Sweetness">
-                <a target="_blank" href="https://girlpuppy.ffm.to/sweetness">
-                    <img src="sweetness_logo2.png" alt="logo_Sweetness" class="logo_Sweetness">
-                </a>
-            </div>
+            /* For mobile, adjust the grid to two rows of five */
+            .buttons-container {
+                grid-template-columns: repeat(5, 1fr);
+                margin-top:10px;
+                gap: 10px;
+                row-gap: 0px;
+            }
+        }
 
-            <h1>
+        /* Additional mobile adjustment for smaller screens */
+        @media (max-width: 400px) {
+            .buttons-container {
+                grid-template-columns: repeat(2, 1fr); /* 2 buttons per row for very small screens */
+            }
+        }
+    </style>
+</head>
+<body>
 
-                <a style="font-size:30px;">
-                    
-                    Going through a breakup?<br>
-                    </a>
-                    <a>
-                        <br>
 
-                    Select where you are in the heartbreak cycle &#x1F494; and girlpuppy will provide you with a
-                    soundtrack. You'll get through this.
-                    
-                    <br>
+    <!--
+    <video autoplay muted loop id="myVideo">
+        <source src="bg5.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    -->
 
-                </a>
-            </h1>
+    <!--ALL TEXT ON PAGE-->
+    <div class="content">
+        <div class="logo_row_Sweetness">
+            <a target="_blank" href="https://girlpuppy.ffm.to/sweetness">
+                <img src="sweetness_logo2.png" alt="logo_Sweetness" class="logo_Sweetness">
+            </a>
+        </div>
 
-            <div class="buttons-container">
-                <a href="https://open.spotify.com/embed/playlist/37i9dQZF1E4qu0dzcBDECq" class="btn">
-                    <img class="myBtn" src="Sweetness Website GIFs/2025-03-12-denial.gif" alt="Denial">
-                </a>
-                <a href="https://open.spotify.com/embed/playlist/37i9dQZF1E8MQijFdxQUgs" class="btn">
-                    <img class="myBtn" src="Sweetness Website GIFs/2025-03-17-Drunk-Text.gif" alt="Drunk Text">
-                </a>
-                <a href="https://open.spotify.com/embed/playlist/37i9dQZF1E8Pm8ACh40PyR" class="btn">
-                    <img class="myBtn" src="Sweetness Website GIFs/2025-03-17-Ugly-Cry.gif" alt="Ugly Cry">
-                </a>
-                <a href="https://open.spotify.com/embed/playlist/37i9dQZF1E8KYLwpHipsgj" class="btn">
-                    <img class="myBtn" src="Sweetness Website GIFs/2025-03-17-Blocking-Unblocking-Reblocking.gif"
-                        alt="Blocking Unblocking">
-                </a>
-                <a href="https://open.spotify.com/embed/playlist/37i9dQZF1E8ONNgvY89Ies" class="btn">
-                    <img class="myBtn" src="Sweetness Website GIFs/2025-03-17-Situationship.gif" alt="Situationship">
-                </a>
-                <a href="https://open.spotify.com/embed/playlist/37i9dQZF1E4qu0dzcBDECq" class="btn">
-                    <img class="myBtn" src="Sweetness Website GIFs/2025-03-17-Revenge-Glow-Up.gif"
-                        alt="Revenge Glow Up">
-                </a>
-                <a href="https://open.spotify.com/embed/playlist/37i9dQZF1E4qu0dzcBDECq" class="btn">
-                    <img class="myBtn" src="Sweetness Website GIFs/2025-03-17-Sad-Girl-Walk.gif" alt="Sad Girl Walk">
-                </a>
-                <a href="https://open.spotify.com/embed/playlist/37i9dQZF1E4qu0dzcBDECq" class="btn">
-                    <img class="myBtn" src="Sweetness Website GIFs/2025-03-17-New-Hobby-Era.gif" alt="New Hobby Era">
-                </a>
-                <a href="https://open.spotify.com/embed/playlist/37i9dQZF1E4qu0dzcBDECq" class="btn">
-                    <img class="myBtn" src="Sweetness Website GIFs/2025-03-17-Forgot-They-Existed.gif"
-                        alt="Forgot They Existed">
-                </a>
-                <a href="https://open.spotify.com/embed/playlist/37i9dQZF1E4qu0dzcBDECq" class="btn">
-                    <img class="myBtn" src="Sweetness Website GIFs/2025-03-12-acceptance.gif" alt="Acceptance">
-                </a>
-            </div>
+        <h1>
 
-            <div class="logo_row_CT">
-                <a target="_blank"
-                    href="https://store.capturedtracks.com/release/491523-girlpuppy-sweetness?lang=en_US">
-                    <img src="logo_CT.png" alt="logo_CT" class="logo_CT">
-                </a>
-            </div>
+            <a>
+                Going through a breakup?<br>
 
-            <!--
+                    Select where you are in the heartbreak cycle &#x1F494; and girlpuppy will provide you with a bespoke
+                    soundtrack, because your life is a movie. You'll get through this.
+            </a>
+        </h1>
+
+        <div class="buttons-container">
+            <a href="https://open.spotify.com/embed/playlist/37i9dQZF1E4qu0dzcBDECq" class="btn">
+                <img class="myBtn" src="Sweetness Website GIFs/2025-03-12-denial.gif" alt="Denial">
+            </a>
+            <a href="https://open.spotify.com/embed/playlist/37i9dQZF1E8MQijFdxQUgs" class="btn">
+                <img class="myBtn" src="Sweetness Website GIFs/2025-03-17-Drunk-Text.gif" alt="Drunk Text">
+            </a>
+            <a href="https://open.spotify.com/embed/playlist/37i9dQZF1E8Pm8ACh40PyR" class="btn">
+                <img class="myBtn" src="Sweetness Website GIFs/2025-03-17-Ugly-Cry.gif" alt="Ugly Cry">
+            </a>
+            <a href="https://open.spotify.com/embed/playlist/37i9dQZF1E8KYLwpHipsgj" class="btn">
+                <img class="myBtn" src="Sweetness Website GIFs/2025-03-17-Blocking-Unblocking-Reblocking.gif"
+                    alt="Blocking Unblocking">
+            </a>
+            <a href="https://open.spotify.com/embed/playlist/37i9dQZF1E8ONNgvY89Ies" class="btn">
+                <img class="myBtn" src="Sweetness Website GIFs/2025-03-17-Situationship.gif" alt="Situationship">
+            </a>
+            <a href="https://open.spotify.com/embed/playlist/37i9dQZF1E4qu0dzcBDECq" class="btn">
+                <img class="myBtn" src="Sweetness Website GIFs/2025-03-17-Revenge-Glow-Up.gif" alt="Revenge Glow Up">
+            </a>
+            <a href="https://open.spotify.com/embed/playlist/37i9dQZF1E4qu0dzcBDECq" class="btn">
+                <img class="myBtn" src="Sweetness Website GIFs/2025-03-17-Sad-Girl-Walk.gif" alt="Sad Girl Walk">
+            </a>
+            <a href="https://open.spotify.com/embed/playlist/37i9dQZF1E4qu0dzcBDECq" class="btn">
+                <img class="myBtn" src="Sweetness Website GIFs/2025-03-17-New-Hobby-Era.gif" alt="New Hobby Era">
+            </a>
+            <a href="https://open.spotify.com/embed/playlist/37i9dQZF1E4qu0dzcBDECq" class="btn">
+                <img class="myBtn" src="Sweetness Website GIFs/2025-03-17-Forgot-They-Existed.gif"
+                    alt="Forgot They Existed">
+            </a>
+            <a href="https://open.spotify.com/embed/playlist/37i9dQZF1E4qu0dzcBDECq" class="btn">
+                <img class="myBtn" src="Sweetness Website GIFs/2025-03-12-acceptance.gif" alt="Acceptance">
+            </a>
+        </div>
+
+        <div class="logo_row_CT">
+            <a target="_blank" href="https://store.capturedtracks.com/release/491523-girlpuppy-sweetness?lang=en_US">
+                <img src="logo_CT1.png" alt="logo_CT" class="logo_CT">
+            </a>
+        </div>
+
+        <!--
         <div class="bottom_right">
             <img src="gp_right.png" alt="gp">
         </div>
         -->
 
-        </div>
+    </div>
 
-    </body>
+</body>
 </main>
-
 </html>
